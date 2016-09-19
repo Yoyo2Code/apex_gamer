@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
+//= require Chart.bundle
+//= require highcharts
+//= require chartkick
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
