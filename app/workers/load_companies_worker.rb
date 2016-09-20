@@ -1,5 +1,5 @@
-class CompanyLocationsWorker
-include Sidekiq::Worker
+class LoadCompaniesWorker
+  include Sidekiq::Worker
 
   def perform
     GiantBombService.new.load_companies
