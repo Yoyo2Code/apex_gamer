@@ -1,0 +1,9 @@
+one:
+  name: "Freddy"
+  location_country: "United States of America"
+  date_founded: "1984-01-01 00:00:00"
+
+two:
+  name: "Heros Programmed"
+  location_country: "United Kingdom"
+  date_founded: "2016-09-20 00:40:30"

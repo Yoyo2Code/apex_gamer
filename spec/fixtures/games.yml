@@ -1,0 +1,14 @@
+one:
+  name: "Breakfree"
+  original_release_date: "1995-12-31 00:00:00"
+  site_detail_url: "http://www.giantbomb.com/breakfree/3030-2/"
+
+two:
+  name: "Hyperballoid Delux: Survival Pack"
+  original_release_date: "2004-12-20 00:00:00"
+  site_detail_url: "http://www.giantbomb.com/hyperballoid-deluxe-survival-pack/3030-3/"
+
+three:
+  name: "The Chessmaster 2000"
+  original_release_date: "1986-06-15 00:00:00"
+  site_detail_url: "http://www.giantbomb.com/the-chessmaster-2000/3030-4/"

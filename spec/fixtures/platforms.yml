@@ -1,0 +1,18 @@
+
+one:
+  name: "Gameboy"
+  original_price: 10.0
+  install_base: 5
+  total_revenue: 50.0
+
+two:
+  name: "Gamecube"
+  original_price: 150.0
+  install_base: 2
+  total_revenue: 300.0
+
+three:
+  name: "Nintendo DS"
+  original_price: 150.0
+  install_base: 2
+  total_revenue: 300.0

@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.giantbomb.com/api/companies/?api_key=c66585c2f638b4f9cb135c0dc661624ce51125cb&field_list=location_country&filter=location_country&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.0
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Powered-By:
+      - PHP/5.6.6
+      Set-Cookie:
+      - device_view=full; expires=Wed, 19-Oct-2016 22:09:55 GMT; Max-Age=2592000;
+        path=/; httponly
+      - sat=94455251fb6b1bdb304137cd5df5edc1; path=/; domain=.giantbomb.com; HttpOnly
+      Cache-Control:
+      - no-cache
+      Date:
+      - Mon, 19 Sep 2016 22:09:55 GMT
+      X-Phoenix-Cache-Expires:
+      - 09-19-2016 15:14:55
+      X-Phoenix-Cached:
+      - 'false'
+      X-Varnish:
+      - '188581552'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish-v4
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '394'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":"OK","limit":100,"offset":0,"number_of_page_results":100,"number_of_total_results":12546,"status_code":1,"results":[{"location_country":"USA"},{"location_country":"UK"},{"location_country":"United
+        Kingdom"},{"location_country":null},{"location_country":"United Kingdom"},{"location_country":"United
+        States"},{"location_country":null},{"location_country":null},{"location_country":null},{"location_country":null},{"location_country":null},{"location_country":"Spain"},{"location_country":null},{"location_country":"USA"},{"location_country":"United
+        States"},{"location_country":"Japan"},{"location_country":"United Kingdom"},{"location_country":"Chile"},{"location_country":"Japan"},{"location_country":null},{"location_country":"Germany"},{"location_country":"Germany"},{"location_country":"United
+        States"},{"location_country":null},{"location_country":"United States"},{"location_country":null},{"location_country":null},{"location_country":null},{"location_country":"Russia"},{"location_country":"Spain"},{"location_country":"United
+        States of America"},{"location_country":null},{"location_country":null},{"location_country":"Germany"},{"location_country":null},{"location_country":"United
+        States"},{"location_country":"Austria"},{"location_country":"Unied States"},{"location_country":null},{"location_country":"United
+        States"},{"location_country":"United States"},{"location_country":"United
+        Kingdom"},{"location_country":null},{"location_country":null},{"location_country":null},{"location_country":"Canada
+        "},{"location_country":"England"},{"location_country":"United Kingdom"},{"location_country":"Germany"},{"location_country":"Austria"},{"location_country":null},{"location_country":"Poland"},{"location_country":null},{"location_country":null},{"location_country":"United
+        States of America"},{"location_country":null},{"location_country":"Japan"},{"location_country":"United
+        States of America"},{"location_country":"UK"},{"location_country":"United
+        States"},{"location_country":"England"},{"location_country":"United Kingdom"},{"location_country":"Canada"},{"location_country":null},{"location_country":null},{"location_country":null},{"location_country":null},{"location_country":"United
+        States"},{"location_country":null},{"location_country":"Japan"},{"location_country":"France"},{"location_country":"United
+        States"},{"location_country":"France"},{"location_country":"Japan"},{"location_country":"United
+        States"},{"location_country":"UK"},{"location_country":"Japan"},{"location_country":"Japan"},{"location_country":"Japan"},{"location_country":null},{"location_country":"Brazil"},{"location_country":"United
+        States"},{"location_country":"Canada"},{"location_country":"USA"},{"location_country":null},{"location_country":"Japan"},{"location_country":"United
+        States"},{"location_country":"Poland"},{"location_country":null},{"location_country":"Japan"},{"location_country":"United
+        States"},{"location_country":"Netherlands"},{"location_country":"United Kingdom"},{"location_country":null},{"location_country":"United
+        States"},{"location_country":null},{"location_country":"Croatia"},{"location_country":"Japan"},{"location_country":"United
+        States of America"},{"location_country":"United States"}],"version":"1.0"}'
+    http_version: 
+  recorded_at: Mon, 19 Sep 2016 22:09:55 GMT
+recorded_with: VCR 3.0.3

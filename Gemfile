@@ -32,6 +32,12 @@ gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'faraday'
+gem 'foundation-rails'
+gem 'chartkick'
+gem 'responders'
+gem 'sidekiq'
+
+gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
