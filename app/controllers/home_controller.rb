@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def show
-     # genres = Faraday.get("http://www.giantbomb.com/api/genres/?api_key=#{ENV['GIANTBOMB_API_KEY']}&format=json&filter=&field_list=name")
+    # genres = Faraday.get("http://www.giantbomb.com/api/genres/?api_key=#{ENV['GIANTBOMB_API_KEY']}&format=json&filter=&field_list=name")
 
 ################################################# ???? Date filtering to show upcoming games
     #games_by_release_date = Faraday.get("http://www.giantbomb.com/api/releases/?api_key=#{ENV['GIANTBOMB_API_KEY']}&format=json&field_list=release_date,platform")
@@ -32,7 +32,7 @@ class HomeController < ApplicationController
 #########################
 
 #########################
-    # platforms_and_sales = Faraday.get("http://www.giantbomb.com/api/platforms/?api_key=#{ENV['GIANTBOMB_API_KEY']}&format=json&field_list=name,original_price,install_base")
+    # pl atforms_and_sales = Faraday.get("http://www.giantbomb.com/api/platforms/?api_key=#{ENV['GIANTBOMB_API_KEY']}&format=json&field_list=name,original_price,install_base")
     #
     # data = JSON.parse(platforms_and_sales.body)["results"]
     # platforms = data.map do |platform_data|

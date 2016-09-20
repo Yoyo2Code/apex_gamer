@@ -2,5 +2,5 @@
   Ever Wondered What Countries Have the Most Gaming Companies?
 </p>
 <div id="map">
-  <%= geo_chart @companies %>
+  <%= geo_chart @companies.group(:location_country).count %>
 </div>

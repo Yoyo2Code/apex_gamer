@@ -2,7 +2,21 @@ require 'rails_helper'
 
 RSpec.describe ChartKickFormatter, type: :model do
   context ".companies_with_country" do
-    it "formats countries" do
+    it "returns countries with count" do
+
+      data = [{ "location_country"=>"USA" },
+              { "location_country"=>"USA" },
+              { "location_country"=>"United Kingdom" }]
+
+      countries = ChartKickFormatter.companies_with_country(data)
+
+      result = { "USA"            => 2,
+                 "United Kingdom" => 1}
+
+      expect(countries).to eq(result)
+    end
+
+    it "removes nils" do
 
       data = [{ "location_country"=>"USA" },
               { "location_country"=>"USA" },
