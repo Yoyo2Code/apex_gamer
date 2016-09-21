@@ -50,6 +50,8 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'rspec-rails'
+  gem 'db-query-matchers'
+  gem 'rails-controller-testing'
 end
 
 group :development do
