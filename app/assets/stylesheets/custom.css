@@ -1,9 +1,3 @@
-.flash-messages {
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-}
-
 .flash-success, .flash-danger {
   text-align: center;
 }
@@ -20,4 +14,54 @@
   width: 350px;
   margin: 0 auto;
   border-radius: 8px 8px 8px 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.company {
+  margin: 0 auto;
+  color: white;
+  background-color: rgb(6, 120, 255);
+  text-align: center;
+  width: 60%;
+  border-radius: 5px 5px;
+}
+
+.platform {
+  margin: 0 auto;
+  color: white;
+  background-color: rgb(6, 120, 255);
+  text-align: center;
+  width: 60%;
+  border-radius: 5px 5px;
+}
+
+.game {
+  margin: 0 auto;
+  color: white;
+  background-color: rgb(6, 120, 255);
+  text-align: center;
+  width: 60%;
+  border-radius: 5px 5px;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://static.pexels.com/photos/18174/reflection-pad-gaming-gamepad.jpg");
+}
+
+.popup {
+  text-align: center;
+}
+
+.banner-text {
+  font-family: fantasy;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  padding-top: 180px;
+  width: 100%;
+  display: inline-block;
+  margin: auto;
 }

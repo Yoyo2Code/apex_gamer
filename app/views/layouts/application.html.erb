@@ -14,36 +14,8 @@
   </head>
 
   <body>
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">ApexGamer</li>
 
-          <li>
-            <a href="#">Categories</a>
-            <ul class="menu vertical">
-              <li><%= link_to "Games", games_path %></li>
-              <li><%= link_to "Companies", companies_path %></li>
-              <li><%= link_to "Platforms", platforms_path %></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li>
-            <% if current_user %>
-            <a href="#"><%= current_user.username %></a>
-            <ul class="menu vertical">
-              <li><%= link_to "Logout", github_logout_path %></li>
-            </ul>
-            <% else %>
-              <%= link_to "Login with Github", github_login_path %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <%= render 'layouts/navbar' %>
 
     <div class="flash-messages">
       <%= render 'layouts/flash' %>

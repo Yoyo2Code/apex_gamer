@@ -5,6 +5,8 @@ describe LoadPlatformsWorker do
     VCR.use_cassette("platforms_load_worker") do
       expect(Platform.all.count).to eq 6
 
+      LoadPlatformsWorker.jobs.clear
+
       expect(LoadPlatformsWorker.jobs.size).to eq 0
 
       LoadPlatformsWorker.perform_async

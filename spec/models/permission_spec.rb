@@ -94,6 +94,14 @@ describe "Permission handles restricts where a user can go" do
       expect(result).to eq(true)
     end
 
+    it "allows registered users access to the data controller" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("data", "index")
+
+      expect(result).to eq(true)
+    end
+
     it "allows registered users to hit 'api/v1/platforms'" do
       user       = User.first
       permission = Permission.new(user)

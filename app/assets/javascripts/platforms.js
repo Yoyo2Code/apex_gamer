@@ -18,10 +18,16 @@ $("#all-platforms").ready(function(){
       function createPlatformHTML( platform ){
         return $("<div class='platform' data-id='"
            + platform.id
-           + "'><h6>Name: "
+           + "'><h6><strong>Name:</strong> "
            + platform.name
-           + "</h6><p>"
+           + "</h6><p><strong>Original Price:</strong> "
            + platform.original_price
+           + "</p><p><strong>Units Sold:</strong> "
+           + platform.install_base
+           + "</p><p><strong>Total Revenue:</strong> "
+           + platform.total_revenue
+           + "</p><p><strong>Release Date:</strong> "
+           + platform.release_date
            + "</p>"
            + "</div>")
       }

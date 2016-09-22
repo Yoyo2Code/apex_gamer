@@ -18,12 +18,12 @@ $("#all-games").ready(function(){
       function createGamesHTML( Game ){
         return $("<div class='game' data-id='"
            + Game.id
-           + "'><h6>Name: "
+           + "'><h6><strong>Name:</strong> "
            + Game.name
-           + "</h6><p>"
+           + "</h6><p><strong>Release Date:</strong> "
            + Game.original_release_date
            + "</p>"
-           + "<p>"
+           + "<p><strong>For More Details:</strong> "
            + Game.site_detail_url
            + "</p>"
            + "</div>")

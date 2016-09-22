@@ -18,12 +18,12 @@ $("#all-companies").ready(function(){
       function createCompaniesHTML( company ){
         return $("<div class='company' data-id='"
            + company.id
-           + "'><h6>Name: "
+           + "'><h6><strong>Name:</strong> "
            + company.name
-           + "</h6><p>"
+           + "</h6><p><strong>Location:</strong> "
            + company.location_country
            + "</p>"
-           + "<p>"
+           + "<p><strong>Date Founded:</strong> "
            + company.date_founded
            + "</p>"
            + "</div>")

@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # get '/', to: "home#show"
-   root to: "home#show"
+  root to: "home#show"
 
   get '/games', to: "games#index"
   get '/platforms', to: "platforms#index"
   get '/companies', to: "companies#index"
+  get '/load_data', to: "data#index"
 
   namespace :maps do
     get '/companies', to: "companies#index"

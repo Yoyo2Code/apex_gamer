@@ -5,6 +5,8 @@ describe LoadGamesWorker do
     VCR.use_cassette("games_load_worker") do
       expect(Game.all.count).to eq 6
 
+      LoadGamesWorker.jobs.clear
+
       expect(LoadGamesWorker.jobs.size).to eq 0
 
       LoadGamesWorker.perform_async
