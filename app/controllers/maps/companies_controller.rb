@@ -1,5 +1,5 @@
 class Maps::CompaniesController < ApplicationController
-  def show
+  def index
     @companies = Company.all
     LoadCompaniesWorker.perform_async
   end

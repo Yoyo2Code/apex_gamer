@@ -1,0 +1,38 @@
+$("#all-companies").ready(function(){
+
+  fetchCompanies();
+
+})
+ function fetchCompanies(){
+   $.ajax({
+     url:"http://localhost:3000/api/v1/companies",
+     type: "get",
+   }).then(collectCompanies)
+     .then(renderCompanies)
+    //  .fail(function() {
+    //    alert( "error" );
+    //  })
+ }
+
+
+      function createCompaniesHTML( company ){
+        return $("<div class='company' data-id='"
+           + company.id
+           + "'><h6>Name: "
+           + company.name
+           + "</h6><p>"
+           + company.location_country
+           + "</p>"
+           + "<p>"
+           + company.date_founded
+           + "</p>"
+           + "</div>")
+      }
+
+      function collectCompanies( companyData ) {
+        return companyData.map(createCompaniesHTML);
+      }
+
+      function renderCompanies( companyData ){
+        $("#all-companies").append( companyData )
+      }

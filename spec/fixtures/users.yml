@@ -1,0 +1,9 @@
+one:
+  username: "Jake"
+  uid: "123456"
+  auth_token: "atokenforyou"
+
+two:
+  username: "Johnny"
+  uid: "78910"
+  auth_token: "notokenforyou"

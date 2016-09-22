@@ -1,0 +1,23 @@
+.flash-messages {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.flash-success, .flash-danger {
+  text-align: center;
+}
+.flash-success {
+  color: white;
+  background-color: green;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 8px 8px 8px 8px;
+}
+.flash-danger {
+  color: white;
+  background-color: crimson;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 8px 8px 8px 8px;
+}

@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/', to: "home#show"
+  # get '/', to: "home#show"
+   root to: "home#show"
+
   get '/games', to: "games#index"
+  get '/platforms', to: "platforms#index"
+  get '/companies', to: "companies#index"
 
   namespace :maps do
-    get '/companies', to: "companies#show"
+    get '/companies', to: "companies#index"
   end
 
   namespace :platforms do
@@ -20,8 +24,8 @@ Rails.application.routes.draw do
     end
   end
 
-  # get '/auth/github', as: :github_login
-  # get '/auth/github/callback', to: 'sessions#create'
-  # get "/logout", to: "sessions#destroy", as: "github_logout"
+  get '/auth/github', as: :github_login
+  get '/auth/github/callback', to: 'sessions#create'
+  get "/logout", to: "sessions#destroy", as: "github_logout"
 
 end
