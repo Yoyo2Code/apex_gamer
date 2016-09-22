@@ -1,3 +1,7 @@
+require 'app/workers/load_companies_worker'
+require 'app/workers/load_platorms_worker'
+require 'app/workers/load_games_worker'
+
 desc "Load Gaming Data"
 task :update_data do
   puts "Updating data..."
