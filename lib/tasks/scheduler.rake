@@ -1,8 +1,8 @@
 desc "Load Gaming Data"
 task :update_data do
   puts "Updating data..."
-  LoadCompaniesWorker.preform_async
-  LoadPlatformsWorker.preform_async
-  LoadGamesWorker.preform_async
+  DataSaver.new.save_companies
+  DataSaver.new.save_platforms
+  DataSaver.new.save_games
   puts "done."
 end
