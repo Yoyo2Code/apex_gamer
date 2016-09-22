@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
     def authorize!
       unless authorized?
-        redirect_to '/', danger: "Login to visit this page"
+        redirect_to '/', danger: "Login to browse content"
       end
     end
 
