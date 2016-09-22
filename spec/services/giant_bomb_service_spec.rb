@@ -13,13 +13,13 @@ describe GiantBombService do
   context "#load_companies" do
     it "can find and load comanies" do
       VCR.use_cassette("companies") do
-        expect { GiantBombService.new.load_companies }.to make_database_queries
+        companies = GiantBombService.new.load_companies
 
-        company = Company.last
+        company = companies.last
 
-        expect(company.name).to eq "BVM Produktion GmbH"
-        expect(company.location_country).to eq nil
-        expect(company.date_founded).to eq nil
+        expect(company["name"]).to eq "BVM Produktion GmbH"
+        expect(company["location_country"]).to eq nil
+        expect(company["date_founded"]).to eq nil
       end
     end
   end
@@ -27,14 +27,15 @@ describe GiantBombService do
   context "#load_platforms" do
     it "can find and load platforms" do
       VCR.use_cassette("platforms") do
-        expect { GiantBombService.new.load_platforms }.to make_database_queries
+        platforms = GiantBombService.new.load_platforms
 
-        platform = Platform.last
+        platform = platforms.first
 
-        expect(platform.name).to eq "FM-7"
-        expect(platform.original_price.to_f).to eq 500
-        expect(platform.install_base).to eq 0
-        expect(platform.total_revenue.to_f).to eq 0
+        expect(platform["name"]).to eq "Amiga"
+        expect(platform["original_price"]).to eq "1285.00"
+        expect(platform["install_base"]).to eq "6000000"
+        expect(platform["release_date"]).to eq "1985-07-23 00:00:00"
+
       end
     end
   end
@@ -42,13 +43,13 @@ describe GiantBombService do
   context "#load_games" do
     it "can find and load games" do
       VCR.use_cassette("games") do
-        expect { GiantBombService.new.load_games }.to make_database_queries
+        games = GiantBombService.new.load_games
 
-        game = Game.last
+        game = games.last
 
-        expect(game.name).to eq "Fantastic Fossils"
-        expect(game.original_release_date).to eq "Sat, 30 Nov 1991 00:00:00 UTC +00:00"
-        expect(game.site_detail_url).to eq "http://www.giantbomb.com/fantastic-fossils/3030-214/"
+        expect(game["name"]).to eq "Fantastic Fossils"
+        expect(game["original_release_date"]).to eq "1991-11-30 00:00:00"
+        expect(game["site_detail_url"]).to eq "http://www.giantbomb.com/fantastic-fossils/3030-214/"
       end
     end
   end

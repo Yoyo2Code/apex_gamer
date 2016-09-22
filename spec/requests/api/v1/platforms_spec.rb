@@ -6,6 +6,7 @@ describe "Platforms Endpoint" do
       platform_one = Platform.first
 
       get '/api/v1/platforms'
+
       expect(response).to be_success
 
       json = JSON.parse(response.body)

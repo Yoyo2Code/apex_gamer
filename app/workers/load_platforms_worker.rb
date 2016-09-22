@@ -2,6 +2,6 @@ class LoadPlatformsWorker
   include Sidekiq::Worker
 
   def perform
-    GiantBombService.new.load_platforms
+    DataSaver.save_platforms
   end
 end

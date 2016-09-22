@@ -22,10 +22,16 @@ class Permission
     def registered_user_permissions
       return true if controller == "home"
       return true if controller == "sessions"
+      return true if controller == "api/v1/platforms"
+      return true if controller == "api/v1/games"
+      return true if controller == "api/v1/companies"
     end
 
     def guest_user_permissions
       return true if controller == "home"
       return true if controller == "sessions"
+      return true if controller == "api/v1/platforms"
+      return true if controller == "api/v1/games"
+      return true if controller == "api/v1/companies"
     end
 end
