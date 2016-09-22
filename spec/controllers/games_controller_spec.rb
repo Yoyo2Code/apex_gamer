@@ -5,7 +5,7 @@ RSpec.describe GamesController, type: :controller do
   context "index action" do
     it "only renders index view" do
       user = User.first
-      
+
       get 'index', {}, { user_id: user.id }
 
       expect(response).to have_http_status(200)

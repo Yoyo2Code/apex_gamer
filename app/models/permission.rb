@@ -25,10 +25,7 @@ class Permission
       return true if controller == "companies"
       return true if controller == "games"
       return true if controller == "sessions"
-
       return true if controller == "platforms/sales"
-
-      return true if controller == "sessions"
       return true if controller == "maps/companies"
       return true if controller == "api/v1/platforms"
       return true if controller == "api/v1/games"

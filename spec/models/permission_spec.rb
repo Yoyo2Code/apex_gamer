@@ -94,30 +94,30 @@ describe "Permission handles restricts where a user can go" do
       expect(result).to eq(true)
     end
 
-  it "allows registered users to hit 'api/v1/platforms'" do
-    user       = User.first
-    permission = Permission.new(user)
-    result     = permission.allow?("api/v1/platforms", "index")
+    it "allows registered users to hit 'api/v1/platforms'" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("api/v1/platforms", "index")
 
-    expect(result).to eq(true)
+      expect(result).to eq(true)
+    end
+
+    it "allows registered users to hit 'api/v1/games'" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("api/v1/games", "index")
+
+      expect(result).to eq(true)
+    end
+
+    it "allows registered users to hit 'api/v1/companies'" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("api/v1/companies", "index")
+
+      expect(result).to eq(true)
+    end
   end
-
-  it "allows registered users to hit 'api/v1/games'" do
-    user       = User.first
-    permission = Permission.new(user)
-    result     = permission.allow?("api/v1/games", "index")
-
-    expect(result).to eq(true)
-  end
-
-  it "allows registered users to hit 'api/v1/companies'" do
-    user       = User.first
-    permission = Permission.new(user)
-    result     = permission.allow?("api/v1/companies", "index")
-
-    expect(result).to eq(true)
-  end
-end
 
   context "#guest_user_permissions" do
     it "allows guest users access to the home controller" do
