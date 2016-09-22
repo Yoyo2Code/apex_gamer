@@ -5,7 +5,7 @@ $("#all-platforms").ready(function(){
 })
  function fetchPlatforms(){
    $.ajax({
-     url:"http://localhost:3000/api/v1/platforms",
+     url:"/api/v1/platforms",
      type: "get",
    }).then(collectPlatforms)
      .then(renderPlatforms)

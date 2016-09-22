@@ -37570,7 +37570,7 @@ $("#all-companies").ready(function(){
 })
  function fetchCompanies(){
    $.ajax({
-     url:"http://localhost:3000/api/v1/companies",
+     url:"/api/v1/companies",
      type: "get",
    }).then(collectCompanies)
      .then(renderCompanies)
@@ -37609,7 +37609,7 @@ $("#all-games").ready(function(){
 })
  function fetchGames(){
    $.ajax({
-     url:"http://localhost:3000/api/v1/games",
+     url:"/api/v1/games",
      type: "get",
    }).then(collectGames)
      .then(renderGames)
@@ -37648,7 +37648,7 @@ $("#all-platforms").ready(function(){
 })
  function fetchPlatforms(){
    $.ajax({
-     url:"http://localhost:3000/api/v1/platforms",
+     url:"/api/v1/platforms",
      type: "get",
    }).then(collectPlatforms)
      .then(renderPlatforms)
