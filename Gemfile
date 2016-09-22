@@ -36,6 +36,7 @@ gem 'foundation-rails'
 gem 'chartkick'
 gem 'responders'
 gem 'sidekiq'
+gem 'rails_12factor', group: :production
 
 gem 'simplecov', :require => false, :group => :test
 
