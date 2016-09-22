@@ -5,7 +5,7 @@ $("#all-companies").ready(function(){
 })
  function fetchCompanies(){
    $.ajax({
-     url:"http://localhost:3000/api/v1/companies",
+     url:"/api/v1/companies",
      type: "get",
    }).then(collectCompanies)
      .then(renderCompanies)
