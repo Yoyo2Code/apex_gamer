@@ -53,30 +53,70 @@ describe "Permission handles restricts where a user can go" do
 
       expect(result).to eq(true)
     end
-  end
 
-  it "allows registered users to hit 'api/v1/platforms'" do
-    user       = User.first
-    permission = Permission.new(user)
-    result     = permission.allow?("api/v1/platforms", "index")
+    it "allows registered users access to the platforms controller" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("platforms", "index")
 
-    expect(result).to eq(true)
-  end
+      expect(result).to eq(true)
+    end
 
-  it "allows registered users to hit 'api/v1/games'" do
-    user       = User.first
-    permission = Permission.new(user)
-    result     = permission.allow?("api/v1/games", "index")
+    it "allows registered users access to the companies controller" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("companies", "index")
 
-    expect(result).to eq(true)
-  end
+      expect(result).to eq(true)
+    end
 
-  it "allows registered users to hit 'api/v1/companies'" do
-    user       = User.first
-    permission = Permission.new(user)
-    result     = permission.allow?("api/v1/companies", "index")
+    it "allows registered users access to the games controller" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("games", "index")
 
-    expect(result).to eq(true)
+      expect(result).to eq(true)
+    end
+
+    it "allows registered users access to the maps/companies controller" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("maps/companies", "index")
+
+      expect(result).to eq(true)
+    end
+
+    it "allows registered users access to the platforms/sales controller" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("platforms/sales", "index")
+
+      expect(result).to eq(true)
+    end
+
+    it "allows registered users to hit 'api/v1/platforms'" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("api/v1/platforms", "index")
+
+      expect(result).to eq(true)
+    end
+
+    it "allows registered users to hit 'api/v1/games'" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("api/v1/games", "index")
+
+      expect(result).to eq(true)
+    end
+
+    it "allows registered users to hit 'api/v1/companies'" do
+      user       = User.first
+      permission = Permission.new(user)
+      result     = permission.allow?("api/v1/companies", "index")
+
+      expect(result).to eq(true)
+    end
   end
 
   context "#guest_user_permissions" do

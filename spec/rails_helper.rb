@@ -7,6 +7,8 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'vcr'
+require 'sidekiq/testing'
+Sidekiq::Testing.fake!
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/vcr_cassettes"

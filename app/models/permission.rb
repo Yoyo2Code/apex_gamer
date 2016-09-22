@@ -9,8 +9,7 @@ class Permission
     @controller = controller
     @action     = action
 
-    case user
-    when user.logged_in?
+    if user.logged_in?
       registered_user_permissions
     else
       guest_user_permissions
@@ -21,7 +20,13 @@ class Permission
 
     def registered_user_permissions
       return true if controller == "home"
+      return true if controller == "games"
+      return true if controller == "platforms"
+      return true if controller == "companies"
+      return true if controller == "games"
       return true if controller == "sessions"
+      return true if controller == "platforms/sales"
+      return true if controller == "maps/companies"
       return true if controller == "api/v1/platforms"
       return true if controller == "api/v1/games"
       return true if controller == "api/v1/companies"

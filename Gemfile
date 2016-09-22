@@ -52,6 +52,7 @@ group :test do
   gem 'rspec-rails'
   gem 'db-query-matchers'
   gem 'rails-controller-testing'
+  gem 'rack_session_access'
 end
 
 group :development do
