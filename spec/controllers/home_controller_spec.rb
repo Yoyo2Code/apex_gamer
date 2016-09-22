@@ -1,9 +1,12 @@
 require 'rails_helper'
 
 describe HomeController, type: :controller do
-  context "show" do
+  fixtures :users
+  context "show action" do
     it "displays homepage" do
-      get 'show'
+      user = User.first
+
+      get 'show', {}, { user_id: user.id }
 
       expect(response).to have_http_status(200)
     end

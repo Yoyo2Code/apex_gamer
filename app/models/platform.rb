@@ -9,7 +9,7 @@ class Platform < ApplicationRecord
     self.where.not(release_date: nil)
   end
 
-  def self.sales_for_top_ten_newest_platforms
-    valid_platforms.order(:release_date).last(10)
+  def self.top_five_newest_platforms
+    valid_platforms.order(:release_date).last(5)
   end
 end

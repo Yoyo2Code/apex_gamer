@@ -2,6 +2,6 @@ class LoadGamesWorker
   include Sidekiq::Worker
 
   def perform
-    DataSaver.save_games
+    DataSaver.new.save_games
   end
 end

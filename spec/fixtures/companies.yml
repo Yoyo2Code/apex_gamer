@@ -7,3 +7,23 @@ two:
   name: "Heros Programmed"
   location_country: "United Kingdom"
   date_founded: "2016-09-20 00:40:30"
+
+three:
+  name: "Something Interesting"
+  location_country: "United Kingdom"
+  date_founded: "2016-09-20 00:40:30"
+
+four:
+  name: "Something fun"
+  location_country:
+  date_founded: "2016-09-20 00:40:30"
+
+five:
+  name: "A gamer afar"
+  location_country: "India"
+  date_founded:
+
+six:
+  name: "A gamer so close"
+  location_country: "Korea"
+  date_founded: "2016-09-20 00:40:30"

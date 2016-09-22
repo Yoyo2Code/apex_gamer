@@ -1,18 +1,41 @@
-
 one:
   name: "Gameboy"
   original_price: 10.0
   install_base: 5
   total_revenue: 50.0
+  release_date: "1985-07-23 00:00:00"
 
 two:
   name: "Gamecube"
-  original_price: 150.0
+  original_price: 140.0
   install_base: 2
   total_revenue: 300.0
+  release_date: "1985-07-23 00:00:00"
 
 three:
   name: "Nintendo DS"
   original_price: 150.0
   install_base: 2
   total_revenue: 300.0
+  release_date: "1985-07-23 00:00:00"
+
+four:
+  name: "A Game System"
+  original_price:
+  install_base: 2
+  total_revenue: 300.0
+  release_date: "1985-07-23 00:00:00"
+
+five:
+  name: "Nintendo DS"
+  original_price: 10.0
+  install_base: 2
+  total_revenue: 300.0
+  release_date: "1985-07-23 00:00:00"
+
+six:
+  name: "Big"
+  original_price: 1.0
+  install_base: 5
+  total_revenue: 300.0
+  release_date:
