@@ -1,5 +1,5 @@
 desc "Load Gaming Data"
-task :update_data => :enviornment do
+task :update_data do
   puts "Updating data..."
   LoadCompaniesWorker.preform_async
   LoadPlatformsWorker.preform_async
