@@ -7,6 +7,9 @@ $("#all-companies").ready(function(){
    $.ajax({
      url:"/api/v1/companies",
      type: "get",
+     success: function(data){
+       console.log(data)
+     }
    }).then(collectCompanies)
      .then(renderCompanies)
     //  .fail(function() {
